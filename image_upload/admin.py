@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Tier, Image
 
-# Register your models here.
+admin.site.register(Tier)
+admin.site.register(Image)
