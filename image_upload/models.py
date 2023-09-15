@@ -15,3 +15,8 @@ class Image(models.Model):
     tier = models.ForeignKey(Tier, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    tier = models.ForeignKey(Tier, on_delete=models.SET_NULL, null=True)
