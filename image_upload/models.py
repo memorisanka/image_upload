@@ -5,7 +5,7 @@ from django.db.models import JSONField
 
 class Tier(models.Model):
     name = models.CharField(max_length=255)
-    thumbnail_sizes = JSONField()
+    thumbnail_sizes = JSONField(default=list)
     allow_original_link = models.BooleanField(default=False)
     allow_expiring_link = models.BooleanField(default=False)
 
